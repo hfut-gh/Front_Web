@@ -1,0 +1,99 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >boxModel1</title>
+    <style>
+        #box{
+            /* margin:0 0 0 0;
+            分别代表上下左右，或者只写两个代表上下、左右； */
+            width: 300px;
+            border: 1px  ;
+            margin: 0 auto;
+            
+        }
+        h2{
+            background-color: red;
+            color: white;
+            line-height: 30px;
+            font-size: 20px;
+            border-radius: 5px 5px;
+            margin: 0;
+            box-shadow: 10px 10px 100px yellow;
+        }
+        form{
+            background-color: red;
+            margin-top: 0;
+            border-radius: 5px 5px;
+        }
+        div[class="login"]{
+            margin: 0;
+        }
+        div:nth-of-type(1) input{
+            border: 3px solid black;
+        }
+        div:nth-of-type(2) input{
+            border: 3px dashed greenyellow;
+        }
+        div:nth-of-type(3) input{
+            border: 5px dashed rgb(23, 29, 15);
+        }
+        
+         
+    </style>
+</head>
+
+<!-- 大撒大撒大撒 -->
+
+<body >
+   <h1>1.盒子模型</h1>
+   margin：外边距；<br>
+   padding：内边距；<br>
+   border：边框，夹在内外边距中间；<br>
+   注意代码规范，文字用span包起来，一个内容要div包起来；<br>
+   <hr>
+   注意：<br>
+   (1)body默认有一个margin=8的边距；<br>
+   (2)盒子的大小长和宽都是=margin+border+padding+内容宽度；<br>
+   (3)实现居中，在外面套一层div，设置宽度大小，设为块元素；<br>
+   (4)上源码之家下载源码；<br>
+   <!-- <div style="width: 500px;display: block;text-align: center;"></div> -->
+   <hr>
+   <div id="box">
+       <h2>账户登录</h2>
+       <div class="login">
+           <form action="#" method="get">
+               <div>
+                   <span>用户名：</span>
+                   <input type="text" >
+               </div>
+               <div>
+                <span>密码：</span>
+                <input type="password" >
+            </div>
+            <div>
+                <span>邮箱：</span>
+                <input type="text" >
+            </div>
+           </form>
+       </div>
+ 
+        
+   </div>
+    
+
+
+
+</body>
+
+
+</html>

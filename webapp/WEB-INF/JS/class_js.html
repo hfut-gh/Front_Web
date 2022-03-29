@@ -1,0 +1,42 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >class_js</title>
+
+    <script>
+        'use strict';
+        var person={
+            name:"gh",
+            age :22,
+            score:99
+        }
+        person.name='gg';
+        //直接删除增加对象的属性
+        delete person.name
+        person.cname="gh";
+        //判断属性值、方法是否在某对象中
+        //有些对象是固有的，通过继承写的
+        'name' in person;
+        "toString" in person;
+         person.hasOwnProperty("toString");
+    </script>
+</head>
+
+<body >
+   
+
+
+</body>
+
+
+</html>

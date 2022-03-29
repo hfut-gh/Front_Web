@@ -1,0 +1,90 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >dispaly1</title>
+    <link rel="stylesheet" href="./dispaly1.css">
+</head>
+
+<body >
+   <div>
+    <h1>1.块级元素和行内元素</h1>
+    (1)h1-h6,div,p, 等都是块级元素；独占一行<br>
+    (2) span,行内元素，不独占一行；<br>
+    行内元素可以被包含在块级元素中，反之不行；<br>
+    display：
+    block 块元素；
+    inline 行内元素，不独占一行；inlin-block 是行内块元素，可以内联，在一行；<br>
+    float：设置成行内元素之后，可以设置float可以实现浮动，向左向右等；<br>
+        注意使用float容易出现塌陷溢出等情况，参考2.解决；<br>
+    clear:right,右侧不允许有浮动元素；left，左侧不允许有浮动元素；both，两侧不允许有浮动元素；none； <br>
+   </div>
+
+
+
+
+<div id="fa1">
+    <h2>实验：</h2>
+    <div class="img1"><img src="../images/1.jpg" alt="海贼1"></div>
+    <div class="img2"><img src="../images/2.jpg" alt="海贼2"></div>
+    <div class="img3"><img src="../images/3.jpg" alt="海贼3"></div>
+    <div class="t4"> 低沉的魔雷之声，越来越近，只见得那九天之上，魔气犹如乌云般的压顶而来，最终在那一道道恐惧的目光中，弥漫了乱魔海上空。<br>
+        而在那滚滚魔气深处，似乎是有着邪恶而冷漠的目光望向了这片天地，最终，</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div>
+    <div>
+        <h1>2.解决父级边框塌陷,溢出</h1>
+    *标签内的内容太少，导致留下很多空白；
+    （1）增加父级边框高度；
+      <!-- div[id="father"]{
+          border:1px #000 solid;
+          height:800px;
+      } -->
+      增加一个空的div框，清楚浮动；<br>
+        在最后面加一个div标签：
+    <!-- <div class="clear"></div>
+    .clear{
+        clear:both;
+        margin:0;
+        padding:0;
+    } -->
+    (2)设置overflow：hidden <br>
+    *标签内的内同过多  <br>
+    (3)设置overflow 来进行滚轮滑动；<br>
+    overflow：hidden；<br>
+    (4)用的最多的方法；<br>
+     给父类边框添加一个伪类,没有副作用，推荐使用；<br>
+      <!-- div[id="father"] :after{
+          content:'';
+          display:block;
+          clear:both;
+      } -->
+    </div>
+    
+    
+</div>
+
+
+
+</body>
+
+
+</html>

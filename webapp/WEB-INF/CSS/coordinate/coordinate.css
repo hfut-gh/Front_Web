@@ -1,0 +1,101 @@
+div[id=fa1]{
+    border: 1px solid #000;
+    padding: 0;
+}
+#bx1{
+    background-color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+    position: relative;
+    top: 0px;
+    right: 50px;
+}
+#bx2{
+    background-color: rgb(0, 255, 157);
+    border: 1px solid rgb(0, 255, 157);
+    position: relative;
+}
+#bx3{
+    background-color: rgb(255, 0, 191);
+    border: 1px solid rgb(255, 0, 191);
+    position: relative;
+}
+
+div[id=fa2]{
+    width: 300px;
+    height: 300px;
+    border: 2px solid red;
+    padding: 10px;
+}
+a[class=blockTest]{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 0, 234, 0.959);
+    line-height: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: seashell;
+}
+a:hover[class=blockTest]{
+    background-color: royalblue;
+}
+a[id=a2]{
+    position:relative;
+    left: 200px;
+    top: -100px;
+}
+a[id=a4]{
+    position:relative;
+    left: 200px;
+    top: -100px;
+}
+a[id=a5]{
+    position:relative;
+    left: 100px;
+    top: -300px;
+}
+
+
+div[id=fa3]{
+    border: 1px solid #000;
+    padding: 0;
+}
+
+div:after[id=fa3]{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+#bx4{
+    background-color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+#bx5{
+    background-color: rgb(0, 255, 157);
+    border: 1px solid rgb(0, 255, 157);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 200px;
+    top: 200px;
+}
+
+
+#a6{
+    position:fixed;
+    display: block;
+    background-color:rgb(245, 9, 48);
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    bottom: 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 60px;
+}

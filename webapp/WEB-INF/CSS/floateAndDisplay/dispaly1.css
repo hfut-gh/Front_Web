@@ -1,0 +1,32 @@
+
+div[id=fa1]{
+    border: 2px red solid;
+    margin-top: 10px;
+}
+
+div[id=fa1] :after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.img1{
+    border: 2px rgb(38, 16, 236) dashed;
+    display: inline-block;
+    
+}
+
+.img2{
+    border: 2px red dashed;
+    display: inline-block;
+}
+
+.img3{
+    border: 2px rgb(18, 201, 49) dashed;
+    display: inline-block;
+    float:right;
+}
+.t4{
+    border:2px rgb(241, 206, 6) dashed;
+    display: inline-block;
+}

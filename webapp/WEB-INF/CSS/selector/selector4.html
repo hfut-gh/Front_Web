@@ -1,0 +1,78 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >selector4</title>
+
+
+    <style>
+        .demo a{
+            float: left;
+            background-color: crimson;
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            display: flex;
+            text-align: center;
+            color: darkgreen;
+            /* 下划线 */
+            text-decoration:none;
+            margin-right: 50px;
+            font: bold 20px/50px Arial;
+        }
+
+        /* a[id*=a]{
+            background-color: darksalmon;
+        } */
+        a[class^=links]{
+            background-color: deeppink;
+        }
+        a[class$=first]{
+            background-color: gold;
+        }
+        
+
+    </style>
+    
+    <!-- 正则表达式的通配符
+    *=,包含；
+    ^=,以xx为开头；
+    $=,以xx为结尾； -->
+    
+   
+
+
+
+</head>
+
+<body >
+   
+  <h1>1.属性选择器-重要</h1>
+
+ <p class="demo">
+    <a href="" class="links first" target="_blank" id="a1"> 1</a>
+    <a href="" class="links item" target="_blank" id="a2"> 2</a>
+    <a href="" class="links second" target="test" id="a3"> 3</a>
+    <a href="" class="links first" target="test" id="a4"> 4</a>
+    <a href="" class="links hha" target="test" id="a5"> 5</a>
+    <a href="" class="links first" target="test" id="a6"> 6</a>
+    <a href="" class="links first" target="test" id="a7"> 7</a>
+ </p>
+
+    
+    
+   
+   
+</body>
+
+
+</html>

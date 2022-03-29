@@ -1,0 +1,73 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >oop_js</title>
+    <script>
+        'use strict';
+        //1.使用__proto__ 进行类的继承；
+        var person={
+            name:'gh',
+            run :function (){
+                console.log("person:walk!")
+            }
+        }
+        var bird={
+            fly :function (){
+                console.log("bird:fly!")
+            }
+        }
+        var nb ={
+            name:'nb'
+        }
+        //指定nb的一个原型是鸟或者其他，可以看到这样做之后，nb的一个属性是proto，proto的属性object为bird的所有属性；
+        nb.__proto__=person;
+        nb.run();
+        nb.__proto__=bird;
+        nb.fly();
+      
+        //2.class继承,es6之后 
+        //直接定义一个类
+        class Student{
+            constructor(name){
+                this.name=name;
+            }
+            say(words){
+                console.log(words);
+            }
+        }
+        var gh =new Student('gh');
+        //继承
+        class SeniorStudent extends Student{
+            constructor(name,grade){
+                super(name);
+                this.grade=grade;
+            }
+            sayGrade(){
+                alert('my grade is'+this.grade);
+            }
+        } 
+        var ghg=new SeniorStudent('ghg',6);
+        ghg.sayGrade();
+        //3.原型链
+        //Student(构造函数)
+    </script>
+</head>
+
+<body >
+   
+
+
+</body>
+
+
+</html>

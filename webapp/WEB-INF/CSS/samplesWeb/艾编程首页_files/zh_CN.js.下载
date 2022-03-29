@@ -1,0 +1,15 @@
+(function (t) {
+t.fallback = 'zh_CN';
+t.defaultDomain = 'js';
+// zh_CN
+t.add("invoice.confirm", "\u4fe1\u606f\u786e\u8ba4", "js", "zh_CN");
+t.add("invoice.submit.success", "\u63d0\u4ea4\u6210\u529f", "js", "zh_CN");
+t.add("invoice.error", "\u9519\u8bef", "js", "zh_CN");
+t.add("invoice.please_choose", "\u8bf7\u5148\u9009\u62e9\u9700\u5f00\u7968\u8ba2\u5355", "js", "zh_CN");
+t.add("invoice.info_save_success", "\u5f00\u7968\u4fe1\u606f\u4fdd\u5b58\u6210\u529f", "js", "zh_CN");
+t.add("invoice.manage_failed", "\u64cd\u4f5c\u5931\u8d25", "js", "zh_CN");
+t.add("invoice.type.electronic", "\u7535\u5b50\u666e\u901a\u53d1\u7968", "js", "zh_CN");
+t.add("invoice.type.paper", "\u7eb8\u8d28\u666e\u901a\u53d1\u7968", "js", "zh_CN");
+t.add("invoice.type.vat", "\u589e\u503c\u7a0e\u4e13\u7528\u53d1\u7968", "js", "zh_CN");
+t.add("admin.invoice.type.please_choose", "\u8bf7\u9009\u62e9\u53d1\u7968\u7c7b\u578b", "js", "zh_CN");
+})(Translator);

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+   <meta charset="utf-8">
+   <title>
+       selector1
+   </title>
+   
+   <style>
+       h2{
+           background-color: chartreuse;
+       }
+       form{
+           background-color: crimson;
+           background-size: contain;
+       }
+
+       .h2class{
+           color: deeppink;
+       }
+       #h2id{
+           color: gold;
+       }
+
+
+   </style>
+
+   
+   
+
+</head>
+
+<body>
+    <h1>1.标签选择器</h1>
+    <hr>
+    <h2>这是2级标题</h2>
+    <p>
+        <form action="" method="get">
+         用户名：<input type="text" name="username" required>
+         密码：<input type="password" name="pwd" required>
+         <br>
+         <input type="submit" value="提交">
+         <input type="reset" value="重置">
+        </form>
+    </p>
+    
+    <h1>2.类选择器</h1>
+    好处：可以多个标签归类，可以复用；也可以跨标签实现；
+      <!-- <style>
+        .className{
+        }
+    </style> -->
+    <h2 class="h2class">这是2级标题，类选择器</h2>
+   
+
+
+    <hr>
+    <h1>3.id选择器</h1>
+    必须保证全局唯一；<br>
+    <!-- <style>
+        #id{
+        }
+    </style> -->
+    <h2 id="h2id">
+        这是2级标题，id选择器
+    </h2>
+
+
+    <hr>
+    <h1>优先级：id选择器》类选择器》标签选择器</h1>
+    没有就近原则 <br>
+     
+
+</body>
+
+
+</html>

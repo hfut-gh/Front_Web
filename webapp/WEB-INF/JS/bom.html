@@ -1,0 +1,62 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >bom</title>
+    <script>
+        'use strict';
+        //1.bom，browser object model
+        //浏览器对象模型
+        //js诞生就是为了让它能在浏览器上运行；
+        window.innerHeight;
+        window.innerWidth;
+        window.outerHeight;
+        window.outerWidth; 
+        //2.navigator,封装了浏览器的信息
+        //一般情况用不到；
+        //也不建议使用它的属性来判断和编写代码
+        //3.screen,屏幕尺寸
+        screen.width;
+        screen.height;
+        //4.location，(重要！)，实现重定向；代表当前页面的url信息
+        location.host;
+        //设置新的地址
+        //location.assign('https://www.baidu.com/');
+        location.host;//当前主机地址
+        location.href;//当前网页地址
+        location.protocol;
+        //5.document，表示当前html页面；
+        //可以直接获取cookie！不建议使用，容易被劫持，恶意人员获取你的cookie从上传到他的服务器上；
+        //服务器端可以设置cookie：httpOnly,这样就好一些；
+        document.cookie;
+        console.log(document.title);
+        //获取具体的文档的结点
+        var dl=document.getElementById('app');
+
+        //6/history,代表浏览器的历史记录，不建议使用
+        //前进后退
+        //history.back();
+        //history.forward();
+
+        //使用ajax进行局部刷新，而不需要进行全局刷新；
+
+    </script>
+</head>
+
+<body >
+   
+
+
+</body>
+
+
+</html>

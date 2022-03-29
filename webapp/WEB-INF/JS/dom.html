@@ -1,0 +1,80 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >dom</title>
+    
+</head>
+
+<body >
+   
+<div id="fa">
+    <h1>js代码需要放到标签代码之后！才能通过document进行查找！</h1>
+    <p>
+        <h2>关于js代码的存放位置</h2>
+        <p>
+            (1)内部代码，放到head中；<br>
+            不需要首次加载的js建议放在head中，如果放进去了，会出现还未被页面渲染，js无法执行的尴尬；<br>
+            但是可以通过 再body标签中 加入 onload="load()";<br>
+            (2)内部代码，放到body中；当浏览器载入网页Body部分的时候，就执行其中的Javascript语句，执行之后输出的内容就显示在网页中。<br>
+            (3)外部代码 <br>
+            总结：在head中加入的代码如果需要和DOM打交道那么可能会报错，所以一般将JS代码加在body的最后，这样当执行这行代码的时候,DOM都已经载入完成了。 <br>
+
+        </p>
+    </p>
+    <div id="text_div">
+        <a href="#" id="a1"></a>
+    </div>
+    <p class="p1">
+        这是p1；
+    </p>
+    <p class="p2">
+        这是p2；
+    </p>
+    
+
+</div>
+</body>
+<script>
+    'use strict';
+    //dom,document object model;
+    //浏览器网页就是一个dom树形结构；
+    //更新、遍历、删除、增加
+    //原生的获取dom结点的代码
+
+    //1.获取结点
+    var fa=document.getElementById('fa');
+    var h1=document.getElementsByTagName('h1');
+    
+    var p2=document.getElementsByClassName('p2');
+    var child=fa.children;
+    var fisrt_child=fa.firstChild;
+    var last_child=fa.lastChild;
+    //使用jQuery更加方便
+    var text_div = document.getElementById('text_div');
+    text_div.innerText='dsaduhasiuydghioyufgadisuyogfdaosy8fg';
+    text_div.style.fontSize='50px';
+    text_div.innerHTML='<strong>nannaannan <strong/>';
+    //只要获得了dom结点就可以更新节点进行一些其他样式的修改等等；
+
+
+    //2.删除结点
+    //先获取到父结点，然后通过父系欸但删除他
+    var fa=document.getElementById('fa');
+    var p1=document.getElementsByClassName('p1');
+    //删除是一个动态的过程；删除多个节点时，children是时刻变化的，删除节点的时候一定要注意；
+    fa.children;
+    //fa.removeChild(fa.children[0]);
+
+</script>
+
+</html>

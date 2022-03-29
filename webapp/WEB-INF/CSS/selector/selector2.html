@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+   <meta charset="utf-8">
+   <title>
+       selector2
+   </title>
+   
+   <style>
+      /* 1.后代选择器 */
+      /* ul li{
+           background-color: greenyellow;
+      } */
+      /* body p{
+          background-color:lightskyblue;
+      } */
+      /* 2.子选择器，选择下一层的所有人 */
+      body>p{
+          background-color: indigo;
+      }
+    /* 3.相邻兄弟选择器，只选择到当前元素的一个兄弟，这里的相邻是指向下一行代码里面的对应兄弟 */
+         /* 如果当前元素里面含有其他标签，选不中？为什么？ */
+      /* .active+p{
+          background-color: mediumblue;
+      } */
+      /* .p5+p{
+          background-color:olivedrab;
+      } */
+
+      /* 4.通用选择器，当前选中元素代码后面的所有对应标签元素 */
+      /* .p3 ~ p{
+          background-color: mediumvioletred;
+      } */
+
+   </style>
+
+   
+   
+
+</head>
+
+<body>
+    <h1>1.层次选择器</h1>
+    <hr>
+    
+    <p>
+        p1
+        
+    </p>
+
+    <p>
+        p2
+    </p>
+
+    <p >
+        p4
+         <p>
+             p4的孩子
+         </p>
+
+        <ul>
+            <li>l1</li>
+            <li>l2</li>
+            
+        </ul>
+    </p>
+
+  
+
+
+    <p class="p3">
+        p3
+        <ul>
+            <li>l1</li>
+            <li>l2</li>
+            <li>l3</li>
+            <li>l4</li>
+        </ul>
+        <p>
+            p3的孩子
+            <form action="" method="get">
+                username:<input type="text"> <br>
+                <input type="submit">
+            </form>
+
+            <p>
+                p3孩子的孩子
+            </p>
+        </p>
+    </p>
+
+    <p class="p5">
+        p5
+    </p>
+
+    <p>
+        p6
+    </p>
+
+    <p>
+        p7
+    </p>
+
+ 
+
+</body>
+
+
+</html>

@@ -1,0 +1,81 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >selector3</title>
+
+<style>
+     ul li:last-child{
+         background-color: olivedrab;
+     }
+  
+     ul li:first-child{
+         background-color: rgb(11, 236, 225);
+     }
+     /* 当前父元素的第几个孩子，其实就是第几个标签(从上往下数) */
+     p:nth-child(3){
+         background-color: orange;
+     }
+     /* 当前父元素的第几个type为p的元素 */
+     p:nth-of-type(3){
+         background-color:pink;
+     }
+      
+     /* 许多带冒号的选择器叫做伪类 */
+     /* 很多特效，动作都是伪类做的，不一定都是js做的； */
+     a:hover{
+         background-color: cadetblue;
+     }
+   
+
+
+
+     
+</style>
+
+</head>
+
+<body >
+
+    <a href="">12314314</a>
+    <h1>1.结构伪类选择器 </h1>
+   <p>
+       p1
+       <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+    </ul>
+   </p>
+
+   <p>
+    p2
+</p>
+
+<p>
+    p3
+ 
+</p>
+
+<p>
+    p4
+</p>
+
+<p>
+    p5
+</p>
+
+
+</body>
+
+
+</html>

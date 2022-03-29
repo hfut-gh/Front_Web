@@ -1,0 +1,88 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >class_function</title>
+    <script>
+        var person={
+            name :'gh',
+            birth : 1999,
+            age : function (){
+                var new_date = new Date().getFullYear();
+                return new_date-this.birth;
+            }
+        }
+        //调用的时候一定要用()
+        person.age();
+
+        function getAge (){
+                var new_date = new Date().getFullYear();
+                return new_date-this.birth;
+            }  
+        var people={
+            name:'nb',
+            birth:1998,
+            age:getAge
+        };
+        people.age(); //ok
+        getAge();//NaN,不知道this.birth是什么，没有指定一个对象
+        //使用apply进行函数对象的指定
+        getAge.apply(people,[]);   
+        
+        //2.内部对象的类和方法
+        //typeof 返回类型
+        //2.1 Date 日期类
+        var now= new Date();//当前年份
+        now.getFullYear();
+        now.getMonth();
+        now.getDate;
+        now.getDay();  //星期几
+        now.getHours;
+        now.getMinutes;
+        now.getSeconds();
+        now.getTime();  //时间戳，世界统一，1970 1.1 0：00 开始
+        console.log(new Date(now.getTime()));
+        //2.2 json
+        //js中皆可转为json对象；json里面尽量都使用 '' 单引号 
+        //对象都用{},数组都用[],所有键值对都用key:value ;
+        var man={
+            name :'gh',
+            birth : 1999,
+            sex:'男',
+            friends : ['a','b','c']
+        }
+        console.log(man);//{name: 'gh', birth: 1999, sex: '男', friends: Array(3)}
+        //转成json
+        var json_man=JSON.stringify(man);
+        console.log(json_man);//{"name":"gh","birth":1999,"sex":"男","friends":["a","b","c"]}
+        //将json解析成js对象
+        console.log(JSON.parse('{"name":"gh","birth":1999,"sex":"男","friends":["a","b","c"]}')) //{name: 'gh', birth: 1999, sex: '男', friends: Array(3)}
+        //可以看到，属性名称在json中都用""括起来，对应的value除了数字都会用双引号括起来；
+
+        //3. AJAX 
+        //js下的原生态写法，xhr异步请求
+        //jQuery 封装好的 方法 $("#name").ajax("")
+        // axios 请求
+        
+
+
+    </script>
+</head>
+
+<body >
+   
+
+
+</body>
+
+
+</html>

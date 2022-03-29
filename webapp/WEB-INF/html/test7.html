@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>test7</title>
+    </head>
+    <body>
+      <h1>1.表单的应用</h1>
+      <br>
+      隐藏、只读等属性<br>
+      <form action="test3.html" method="get">
+         <p>
+             readonly 只能输入不能删除 <br>
+             用户名：<input type="text" name="username" readonly id="mark">
+             密码：<input type="password" name="password">
+         </p>
+
+         <p>
+             disabled 禁用，选不了；<br>
+             性别：<input type="checkbox" name="sex" value="male" disabled>男
+                  <input type="checkbox" name="sex" value="female ">女
+         </p>
+        
+         <p>
+             增强鼠标可用性，使用label，实现：点击它就能在指定位置锁定起来 <br>
+             <label for="mark">点击锁定</label>
+             <input type="text" >
+         </p>
+
+        <hr>
+        <h1>2.表单初级验证</h1> <br>
+        placeholder,输入框提示信息 <br>
+         required, 必须要填，非空<br>
+          pattern,匹配正则表达式 <br>
+
+          <p>
+            用户名：<input type="text" name="tx1" placeholder="请输入用户名" required >
+            密码：<input type="password" name="password" placeholder="请输入密码" required>
+          </p>
+        
+         <p>
+             自定义邮箱：
+             <input type="text" name="diymail" pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$">
+         </p>
+
+         
+         <p>
+             <input type="submit" value="提交表单">
+             <input type="reset" value="重置表单">
+         </p>
+           
+      </form>
+
+    
+    </body>
+</html>

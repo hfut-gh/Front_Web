@@ -1,0 +1,96 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >coordinate</title>
+    <link rel="stylesheet" href="./coordinate.css">
+</head>
+
+<body >
+   <div class="1h1">
+    <h1>1.相对定位</h1>
+    属性position：relative； <br>
+    top,left,right,bottom:px;<br>
+    注意：如果使用i相对定位，是相对于原来的位置进行偏移，且它仍然在标准文档中，原来的位置会被保留；<br>
+    <hr>
+    例子：<br>   
+    <div id="fa1">
+        <div id=bx1>第一个盒子</div>
+        <div id=bx2>第二个盒子</div>
+        <div id=bx3>第三个盒子</div>
+    </div>
+    <hr>
+    第二个例子；<br>
+    <div id="fa2">
+            <div>
+                <a href="#" id="a1" class="blockTest">链接1</a>
+            </div>
+            <div>
+                <a href="#" id="a2" class="blockTest">链接2</a>
+            </div>
+            <div>
+                <a href="#" id="a3" class="blockTest">链接3</a>
+            </div>
+            <div>
+                <a href="#" id="a4" class="blockTest">链接4</a>
+            </div>
+            <div>
+                <a href="#" id="a5" class="blockTest">链接5</a>
+            </div>
+            
+    </div>
+  
+
+</div>
+   
+   <div class="2h1">
+    <h1>2.绝对定位</h1>
+    position：absolute；<br>
+    绝对定位它不在标准文档流中，原来的位置不会被保留；<br>
+    没有父级元素的情况下，使用绝对定位，会相对于浏览器；<br>
+    如果有父级元素且父级元素存在定位，则会相对于父级元素进行偏移；<br>
+    (不对，实验就是相对于浏览器移动的)<br>
+    
+   </div>
+
+
+   例子：<br>
+   <div id="fa3">
+       <div id=bx4>第四个盒子</div>
+       <div id=bx5>第五个盒子</div>
+   </div>
+   
+   <br><br><br><br><br><br><br><br><br>
+<hr>
+ 
+  
+
+   <div class="3h1">
+    <h1>3.固定定位</h1>
+    position：fixed；
+   </div>
+
+   例子：<br>
+   <div id="fa4">
+        <a href="#" id="a6"> TOP</a>
+   </div>
+    
+   <div class="4h1">
+    <h1>4.z-index</h1>
+   </div>
+  
+   
+
+</body>
+
+
+</html>

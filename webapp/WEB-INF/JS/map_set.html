@@ -1,0 +1,58 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >map_set,ES6的新特性</title>
+    <script>
+        'use strict';
+        var map= new Map([['g',91],['h',100]]);
+        var name =map.get('g');
+        map.set('admin',123456);
+        
+        //集合自动去重,无序；
+        var set=new Set([1,2,2,2,2,3]);
+
+        set.delete(1)
+        set.add(5);
+        //判断某元素是否在set里面
+        console.log(set.has(1));
+
+        //for each是5.1的特性
+        //for of是6 的特性；
+        //遍历数组
+        var arr=[1,2,3,4];
+        for(var x of arr)
+        {
+            console.log(x);
+        }
+        //遍历map
+        var map= new Map([['g',91],['h',100]]);
+        for(let x of map){
+            console.log(x);
+        }
+        //遍历集合
+        var set=new Set([1,2,3,3,3,4])
+        for(let x of set){
+            console.log(x);
+        }
+
+    </script>
+</head>
+
+<body >
+   
+
+
+</body>
+
+
+</html>
