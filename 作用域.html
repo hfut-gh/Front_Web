@@ -1,0 +1,86 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >作用域 js</title>
+    <script>
+        'use strict';
+        //变量的作用域
+        //js中 ,var是由作用域的
+        //如果在函数体中，函数体外就不可用；非要使用的话，可以研究闭包；
+        function abs(x){
+            if(x<0){
+                return -x;
+            }
+            else{
+                return x;
+            }
+        }
+        //内部函数可以调用外部函数的变量；
+
+        //结果是xundefined，但是y并没有报错；
+        //可以这样理解：js引擎首先会将所有申明识别到然后提上去，但是执行赋值的时候并不会真正用去赋值；
+        //因此，写js时的习惯：把所有变量放到前面；讲申明都放到最前面；
+        // var x="x"+y;
+        // console.log(x);
+        // var y="y";
+
+        //全局对象window
+        //所有的全局变量都是绑定在window下的
+        //alert函数也是windows的方法
+        var vv="vv"
+        window.alert(window.vv);
+
+        //js只有一个全局作用域，任何函数、变量都可以视作变量
+        //假设在函数作用于下没有找到，就向外查找,如果在全局作用域中都没找到(window)，那就undefined；
+        var old_alert=window.alert;
+        old_alert(vv);
+        window.alert=function (){};
+        //现在window.alert和alert均变成空函数，失效
+        window.alert("123");
+        alert("456");
+        window.alert=old_alert;
+        alert("789")
+
+        //es6之前，定义一个常量，直接就是var，不过命名规范是全部大写
+        var PI="3.1415926";
+        //es6使用const
+        const PI="3.1415926";
+
+        //由于所有全局变量都会绑定到window上，如果不同的js文件使用了相同的变量，如何减少冲突？
+        //定义一个唯一全局变量；讲所创建的全局变量都邦在这个自定义的全局变量上，降低全局命名冲突问题；
+        var myglobal={};
+        myglobal.name="nb";
+        myglobal.f1=function (a,b){ return a + b ;};
+
+
+        //局部作用域
+        for(var i=0;i<100;i++){
+            console.log(i);
+        }
+        //输出101，因为i是全局变量，加入了唯一全局变量window中
+        //建议使用let 局部变量，es6之后的特性；
+        console.log(i+1);
+
+       
+
+    </script>
+</head>
+
+<body >
+   
+
+
+</body>
+
+
+</html>
