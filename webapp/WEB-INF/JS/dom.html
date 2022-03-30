@@ -42,7 +42,9 @@
     </p>
     <hr>
     <h1>创建和插入节点测试</h1>
-
+    <div id="div_insert">
+       
+    </div>
 
 </div>
 </body>
@@ -77,9 +79,21 @@
     fa.children;
     //fa.removeChild(fa.children[0]);
     
-
     //3.插入节点
     //当我们获得了某个dom结点的时候
+    var newP =document.createElement('p');
+    newP.id='newP';
+    newP.innerText="This p is created by js!";
+
+    var div_insert=document.getElementById('div_insert');
+    div_insert.appendChild(newP);
+
+    var mystyle=document.createElement('style');
+    mystyle.setAttribute('type','text/css');
+    mystyle.innerHTML='#newP{background-color: chocolate}';
+
+    var head =document.getElementsByTagName('head');
+    head[0].appendChild(mystyle);
     
 </script>
 

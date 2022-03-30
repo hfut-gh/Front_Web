@@ -1,0 +1,143 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >form_op</title>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+</head>
+
+<body >
+   <div>
+       <h1>1.表单操作</h1>
+       <div>
+           <form action="#" method="get">
+               <p>
+                <span>
+                    用户名：<input type="text" id="username">
+                </span>
+                <br>
+                <span>
+                    密码：<input type="password" id="password">
+                </span>
+                <br>
+                <span>
+                    <input type="button" value="登录">
+                </span>
+                <span>
+                    <input type="button" value="注册">
+                </span>
+               </p>
+               
+               <p>
+                   <span>性别：</span>
+                   <input type="radio" name="sex" value="man" id="sex_man"> 男
+                   <input type="radio" name="sex" value="woman" id="sex_woman">女
+               </p>
+                
+
+               <div>
+                <input type="submit" value="提交" disabled>
+                <input type="reset" value="重置" disabled>
+               </div>
+           </form>
+       </div>
+   </div>
+   <hr>
+   <br>
+   <p>
+       <h1>2.表单提交</h1>
+       可以在表单的标签中设置表单级别的点击提交函数，onsubmit="return login()" ;<br>
+       但是要注意，onsubmit绑定一个提交检测的函数，需要onsubmit="return login()",如果结果为false就不提交，那么这里就可以进行表单信息的校验；<br>
+       <h2>2.1普通加密提交</h2>
+       <form action="https://www.bilibili.com/" method="post" onsubmit="return login()">
+        <p>
+            <span>
+                用户名：<input type="text" id="username1">
+            </span>
+            <br>
+            <span>
+                密码：<input type="password" id="password1">
+            </span>
+            <br>
+            <span>
+                <!-- 给button绑定点击事件，当被点击的时候进入到对应的js函数 -->
+                <input type="button" value="登录" onclick="login()">
+            </span>
+            <span>
+                <input type="button" value="注册">
+            </span>
+            <br>
+            <span>
+                <input type="submit" value="提交">
+            </span>
+        </p>
+       </form>
+
+       <h2>2.2优秀的加密提交</h2>
+       将密码用另外一个隐藏的密码框接收，直接对pwd进行md5加密给到隐藏的框中；<br>
+       这样就不会出现，密码框再提交一瞬间突然变长的情况了，增加用户体验；<br>
+       <p>
+           <form action="https://www.baidu.com/" onsubmit="return login_pro()">
+            <p>
+                用户名：<input type="text" id="name">
+               </p>
+               <p>
+                密码：<input type="password" id="pwd">
+               </p>
+               <input type="hidden" id="md5_pwd">
+               <input type="submit" value="提交/登录">
+           </form>
+          
+       </p>   
+  </p>
+
+
+</body>
+
+<script type="text/javascript">
+    var username=document.getElementById('username');
+    //username.value获取输入到文本框中的内容，也可以赋值
+    var man_radio = document.getElementById('sex_man');
+    var woman_raido=document.getElementById('sex_woman');
+    //使用man_radio.checked查看radio是否被选中
+     
+</script>
+
+<script type="text/javascript">
+    function login(){
+       alert('进入点击事件！')
+       //对于密码要使用md5进行加密
+       //需要在头标签中导入相应的包
+       var username1=document.getElementById('username1');
+       var password1=document.getElementById('password1');
+       console.log(password1.value)
+       password1.value =md5(password1.value)
+       console.log(username1.value)
+       console.log(password1.value)
+       //可以在这里校验表单的内容
+       return false;
+    }
+    
+     
+
+    function login_pro(){
+        alert('进入点击事件！')
+        var name=document.getElementById('name');
+        var pwd=document.getElementById('pwd');
+        var md5_pwd=document.getElementById('md5-pwd');
+        md5_pwd.value=md5(pwd.value);
+        return true;
+    }
+</script>
+
+
+</html>

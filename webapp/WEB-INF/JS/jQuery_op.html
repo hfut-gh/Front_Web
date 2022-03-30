@@ -1,0 +1,41 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >jQuery_op</title>
+    <script src="./lib/jquery-3.5.1.js"></script>
+</head>
+
+<body >
+   <h1>1.相关概述</h1>
+   jQuery就是js库，讲很多js方法封装起来，方便使用；<br>
+   导入方式：<br>
+   (1)官网下载<br>
+   分为编译和未编译版本,production版本即可；做项目的话就引到项目中去；<br>
+   <!-- <script src="./lib/jquery-3.5.1.js"></script> -->
+   (2)在线cdn引入,CDN jQuery  <br>
+   <!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script> -->
+   <h1>2.使用公式</h1> 
+   $(selector).action(){} <br>
+   例子：<br>
+   <a href="#" id="test">点击测试jQuery</a>
+    <script>
+        $('#test').click(
+            function (){
+                alert('已经通过jQuery设置点击事件！')
+            }
+        )
+    </script>
+</body>
+
+
+</html>
