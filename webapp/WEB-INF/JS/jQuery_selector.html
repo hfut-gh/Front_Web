@@ -1,0 +1,39 @@
+<!--头文件，规范-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--网页头部-->
+<head>
+<!--    meta 标签是描述性标签，它用来描述我们网站的一些信息,一般用来作SEO-->
+<!--    一般是一些键值对-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ghnb 哈哈哈哈">
+    <meta name="description" content="描述">
+<!--    title 标题-->
+    <title >jQuery_selector</title>
+</head>
+
+<body >
+   
+    <div id="mydiv"> 
+        <span>这是mydiv标签；</span>  
+        <h1 class="myh1">jQuery选择器</h1>
+    </div>
+
+</body>
+
+<script>
+    'use strict';
+    //id选择,如果id里面有[]，使用\\进行转义
+    $('#mydiv');
+    //标签选择
+    $('div');
+    //类选择
+    $('.myh1');
+    //设置事件
+    $('.myh1').mousedown(function (){});
+    //mouseenter,鼠标进入；mousemove，移动；
+</script>
+
+</html>
